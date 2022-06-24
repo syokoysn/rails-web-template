@@ -1,0 +1,30 @@
+{
+    "name": "Ruby 3.0.3 dev",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "zsh (login)": {
+                "path": "zsh",
+                "args": [
+                    "-l"
+                ]
+            }
+        },
+    },
+    "extensions": [
+        "gruntfuggly.todo-tree",
+        "pkief.material-icon-theme",
+        "editorconfig.editorconfig",
+        "wingrunr21.vscode-ruby",
+        "bung87.rails",
+        "jduponchelle.rainbow-end"
+    ],
+    "forwardPorts": [
+        3000
+    ],
+    // "runArgs": [
+    //     "--env-file",
+    //     ".env"
+    // ],
+}
