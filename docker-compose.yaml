@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8.0.2
+    environment:
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3306:3306"
+  web:
+    build: .
+    command: /bin/sh #-c "rm -f tmp/pids/server.pid"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+    volumes:
+      - .:/rails-web-template
+    ports:
+      - "3000:3000"
